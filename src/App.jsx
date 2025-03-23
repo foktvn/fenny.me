@@ -84,7 +84,7 @@ const skills = [
 ];
 
 export default function PortfolioRoadmap() {
-  const [activeTab, setActiveTab] = useState("frontend");
+  const [activeTab, setActiveTab] = useState("qa");
 
   const frontendProjects = [
     {
@@ -146,6 +146,13 @@ export default function PortfolioRoadmap() {
           <br />
           <br />
           Feel free to check out my{" "}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            className="text-blue-400 underline"
+          >
+            CV / Resume,
+          </a>{" "}
           <a
             href="https://linkedin.com/in/fenny-oktaviani"
             target="_blank"
@@ -209,9 +216,17 @@ export default function PortfolioRoadmap() {
 
       {/* Work Experience Horizontal Timeline */}
       <section>
-        <h2 className="text-2xl font-bold mb-10 text-blue-300 text-center">
-          Work Experience
-        </h2>
+        <div className="text-center mb-10">
+          <h2 className="text-2xl font-bold  text-blue-300 ">
+            Work Experience
+          </h2>
+          <a href="https://porto-fenny.my.canva.site/">
+            More details,{" "}
+            <span className="text-blue-400 font-bold">
+              let's check this out
+            </span>
+          </a>
+        </div>
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8 overflow-x-auto px-2">
           {experience.map((item, index) => (
             <div
@@ -251,10 +266,13 @@ export default function PortfolioRoadmap() {
       {/* Project Tabs */}
       <section className="text-center">
         <h2 className="text-2xl font-bold  text-yellow-300">Projects</h2>
-        <a href="https://porto-fenny.my.canva.site/">
-          More details,{" "}
-          <span className="text-blue-400 font-bold">let's check this out</span>
-        </a>
+        <p>
+          Below are personal projects that I independently created and
+          developed. These do not include company-related work and are intended
+          to showcase my own learning, creativity, and technical capabilities in
+          both QA and frontend development.
+        </p>
+
         <div className="flex justify-center my-6 gap-4">
           <button
             onClick={() => setActiveTab("qa")}
